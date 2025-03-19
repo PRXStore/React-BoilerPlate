@@ -17,7 +17,7 @@ import React, {
   }) => {
     const [visible, setVisible] = useState(false);
   
-    useNuiEvent<boolean>("setVisible", setVisible);
+    useNuiEvent("setVisible", setVisible);
   
     useEffect(() => {
       if (!visible) return;
