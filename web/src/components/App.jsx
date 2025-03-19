@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./App.css";
-import { debugData } from "../utils/debugData";
-import { fetchNui } from "../utils/fetchNui";
+import { debugData } from "./utils/debugData";
+import { fetchNui } from "./utils/fetchNui";
 
 debugData([
   {
@@ -26,10 +26,10 @@ const ReturnClientDataComp = ({
 
 
 const App = () => {
-  const [clientData, setClientData] = useState<ReturnData | null>(null);
+  const [clientData, setClientData] = useState(null);
 
   const handleGetClientData = () => {
-    fetchNui<ReturnData>("getClientData")
+    fetchNui("getClientData")
       .then((retData) => {
         console.log("Got return data from client scripts:");
         console.dir(retData);
