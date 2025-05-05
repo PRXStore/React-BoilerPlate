@@ -12,10 +12,12 @@ games {
   "rdr3"
 }
 
-ui_page 'web/build/index.html'
+-- ui_page 'web/build/index.html'
+ui_page 'http://localhost:5173' -- Dev
 
 client_script "client/**/*"
 server_script "server/**/*"
+shared_script {"@ox_lib" , "shared/**/*"}
 
 files {
 	'web/build/index.html',
