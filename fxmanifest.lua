@@ -17,7 +17,7 @@ ui_page 'http://localhost:5173' -- Dev
 
 client_script "client/**/*"
 server_script "server/**/*"
-shared_script {"@ox_lib" , "shared/**/*"}
+shared_script {"@ox_lib/init.lua" , "shared/**/*"}
 
 files {
 	'web/build/index.html',
